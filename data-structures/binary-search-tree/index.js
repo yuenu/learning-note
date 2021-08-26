@@ -90,6 +90,7 @@ class BinarySearchTree {
   }
   DFSInOrder() {
     const data = [];
+    if(!this.root) return data
     function traverse(node) {
       if (node.left) traverse(node.left);
       data.push(node.value);

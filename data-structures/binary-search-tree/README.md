@@ -106,9 +106,9 @@ find(value) {
 - Insertion - O(log n)
 - Searching - O(log n)
 
-# Breadth-First Search (BFS)
+## Breadth-First Search (BFS)
 
-![](https://img-blog.csdnimg.cn/20190317005509279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lpZmVuNDIzNA==,size_16,color_FFFFFF,t_70)
+![BFS](https://img-blog.csdnimg.cn/20190317005509279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lpZmVuNDIzNA==,size_16,color_FFFFFF,t_70)
 
 ### Setting up our tree
 
@@ -225,7 +225,8 @@ DFSPostOrder() {
 ```js
 DFSInOrder() {
   const data = [];
-  function traverse() {
+  if(!this.root) return data
+  function traverse(node) {
     if (node.left) traverse(node.left);
     data.push(node.value);
     if (node.right) traverse(node.right);
@@ -236,7 +237,8 @@ DFSInOrder() {
 // [2, 5, 7, 10, 11, 13, 16]
 ```
 
-# Recap
+## Recap
+
 - Trees are non-linear data structures that contain a root and child nodes
 - Binary Trees can have values of any type, but at most two children for each parent
 - Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is lessthan it's value and every node to the right is greater
